@@ -3,8 +3,8 @@ package entities;
 public class Employee {
 	
 	private String name;
-	private Integer hours;
-	private Double value;
+	protected Integer hours;
+	protected Double value;
 	
 	public Employee() {
 		super();
