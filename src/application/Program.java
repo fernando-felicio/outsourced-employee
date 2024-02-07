@@ -41,10 +41,10 @@ public class Program {
 				scanner.nextLine();
 
 				System.out.print("Additional charge: ");
-				Double addCharge = scanner.nextDouble();
+				Double additionalCharge = scanner.nextDouble();
 				scanner.nextLine();
 
-				OutsourcedEmployee outsourced = new OutsourcedEmployee(name, hours, valuePerHour, addCharge);
+				OutsourcedEmployee outsourced = new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge);
 
 				employee.add(outsourced);
 
