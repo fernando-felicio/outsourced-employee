@@ -30,7 +30,7 @@ public class OutsourcedEmployee extends Employee{
 	
 	@Override
 	public String toString() {
-		return super.toString() + " | Additional Charge: " + addCharge;
+		return super.toString() + " | Additional Charge: " + addCharge + " (((OUTSOURCED EMPLOYEE)))";
 	}
 
 }

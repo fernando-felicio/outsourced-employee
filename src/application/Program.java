@@ -70,12 +70,14 @@ public class Program {
 			}
 		}
 
-		System.out.print("LIST OF EMPLOYEES: ");
+		System.out.println("LIST OF EMPLOYEES: ");
+		
 
 		for (Employee empList : employee) {
 			System.out.println(empList);
 		}
 
+		System.out.println("----------------");
 		System.out.println("PAYMENTS:");
 
 		for (Employee empList : employee) {
