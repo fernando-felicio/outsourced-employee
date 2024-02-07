@@ -27,18 +27,18 @@ public class Program {
 			System.out.print("Outsourced (y/n) ?");
 			String outsource = scanner.nextLine().toLowerCase();
 
+			System.out.print("Name: ");
+			String name = scanner.nextLine();
+
+			System.out.print("Hours: ");
+			Integer hours = scanner.nextInt();
+			scanner.nextLine();
+
+			System.out.print("Value per hour: ");
+			Double valuePerHour = scanner.nextDouble();
+			scanner.nextLine();
+
 			if (outsource.charAt(0) == 'y') {
-
-				System.out.print("Name: ");
-				String name = scanner.nextLine();
-
-				System.out.print("Hours: ");
-				Integer hours = scanner.nextInt();
-				scanner.nextLine();
-
-				System.out.print("Value per hour: ");
-				Double valuePerHour = scanner.nextDouble();
-				scanner.nextLine();
 
 				System.out.print("Additional charge: ");
 				Double additionalCharge = scanner.nextDouble();
@@ -47,22 +47,7 @@ public class Program {
 				OutsourcedEmployee outsourced = new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge);
 
 				employee.add(outsourced);
-
-			}
-
-			else {
-
-				System.out.print("Name: ");
-				String name = scanner.nextLine();
-
-				System.out.print("Hours: ");
-				Integer hours = scanner.nextInt();
-				scanner.nextLine();
-
-				System.out.print("Value per hour: ");
-				Double valuePerHour = scanner.nextDouble();
-				scanner.nextLine();
-
+			} else {
 				Employee emp = new Employee(name, hours, valuePerHour);
 
 				employee.add(emp);
@@ -71,7 +56,6 @@ public class Program {
 		}
 
 		System.out.println("LIST OF EMPLOYEES: ");
-		
 
 		for (Employee empList : employee) {
 			System.out.println(empList);
