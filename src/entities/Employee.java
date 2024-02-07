@@ -46,5 +46,15 @@ public class Employee {
 	public Double payment() {
 		return this.value * this.hours;
 	}
+	
+	@Override
+	public String toString() {
+		return "Name of employee: "
+				+ name
+				+ " | Worked hours: "
+				+ hours
+				+ " | Value per hour: "
+				+ value;
+	}
 
 }

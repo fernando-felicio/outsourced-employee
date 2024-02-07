@@ -27,5 +27,10 @@ public class OutsourcedEmployee extends Employee{
 		return (this.value * this.hours) + (addCharge += addCharge * 0.10);
 
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " | Additional Charge: " + addCharge;
+	}
 
 }

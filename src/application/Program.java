@@ -28,46 +28,58 @@ public class Program {
 			String outsource = scanner.nextLine().toLowerCase();
 
 			if (outsource.charAt(0) == 'y') {
-				
+
 				System.out.print("Name: ");
 				String name = scanner.nextLine();
-				
+
 				System.out.print("Hours: ");
 				Integer hours = scanner.nextInt();
 				scanner.nextLine();
-				
+
 				System.out.print("Value per hour: ");
 				Double valuePerHour = scanner.nextDouble();
 				scanner.nextLine();
-				
+
 				System.out.print("Additional charge: ");
 				Double addCharge = scanner.nextDouble();
 				scanner.nextLine();
-				
+
 				OutsourcedEmployee outsourced = new OutsourcedEmployee(name, hours, valuePerHour, addCharge);
-				
+
 				employee.add(outsourced);
 
 			}
-			
+
 			else {
-				
+
 				System.out.print("Name: ");
 				String name = scanner.nextLine();
-				
+
 				System.out.print("Hours: ");
 				Integer hours = scanner.nextInt();
 				scanner.nextLine();
-				
+
 				System.out.print("Value per hour: ");
 				Double valuePerHour = scanner.nextDouble();
 				scanner.nextLine();
-				
+
 				Employee emp = new Employee(name, hours, valuePerHour);
-				
+
 				employee.add(emp);
-				
+
 			}
+		}
+
+		System.out.print("LIST OF EMPLOYEES: ");
+
+		for (Employee empList : employee) {
+			System.out.println(empList);
+		}
+
+		System.out.println("PAYMENTS:");
+
+		for (Employee empList : employee) {
+			System.out.println(empList.getName() + " - $" + empList.payment());
 		}
 
 		scanner.close();
